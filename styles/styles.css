@@ -1,0 +1,181 @@
+:root, body {
+    height: 100vh;
+    --box-shadow-color: rgb(207, 207, 207);
+    --background-color: rgb(45, 108, 150);
+    --light-gray: rgb(238, 238, 238);
+    --error-color: rgb(192, 0, 0);
+    --focus-color: rgb(0, 110, 255);
+}
+
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('../fonts/Norse-Bold.otf');
+}
+
+em {
+    font-style: italic;
+}
+
+body {
+    display: flex;
+    font-family: sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.left-section {
+    position: relative;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 32%;
+}
+
+.left-section .logo-wrapper {
+    position: absolute;
+    top: 20%;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(255, 255, 255);
+    font-family: 'Norse Bold', sans-serif;
+    font-size: min(4rem, 10vh);
+}
+
+.left-section .logo-wrapper span {
+    display: block;
+    height: min(3.1rem, calc(0.775 * 10vh));
+    line-height: normal;
+}
+
+.left-section .logo-wrapper img {
+    height: calc(100% - 25px);
+}
+
+.left-section .photo-by-span {
+    font-size: 0.7rem;
+    font-family: sans-serif;
+    display: block;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    text-align: center;
+}
+
+.left-section .photo-by-span a {
+    font-size: 0.7rem;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.right-section {
+    background-color: var(--light-gray);
+    width: calc(100% - 32%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-section p {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
+form .lets-do-this-section {
+    background-color: rgb(255, 255, 255);
+    padding: 18px 30px;
+    min-height: fit-content;
+    max-height: 25%;
+    box-sizing: border-box;
+    box-shadow: 0 10px 5px -5px var(--box-shadow-color);
+}
+
+form .lets-do-this-section h2 {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+form .lets-do-this-section > ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 40px;
+    row-gap: 20px;
+    max-width: 70%;
+    margin-top: 20px;
+}
+
+form .lets-do-this-section li {
+    display: flex;
+    flex-direction: column;
+}
+
+form .lets-do-this-section label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+form .lets-do-this-section input {
+    font-size: 0.9rem;
+    border: 1pt solid rgb(226, 226, 226);
+    border-radius: 3px;
+    margin: 0;
+    padding: 4px 6px;
+}
+
+form .lets-do-this-section input.focus {
+    border-color: var(--focus-color);
+    box-shadow: 2px 2px 5px rgb(185, 185, 185);
+}
+
+form .lets-do-this-section input.error {
+    border-color: var(--error-color);
+}
+
+form .lets-do-this-section input.error + span {
+    display: block;
+    margin-top: 2px;
+    color: var(--error-color);
+    font-size: 0.6rem;
+}
+
+form button {
+    cursor: pointer;
+    margin: 30px;
+    padding: 10px 35px;
+    background-color: var(--background-color);
+    border: none;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    box-shadow: 2px 5px 5px var(--box-shadow-color);
+}
+
+.already-have-an-account-span {
+    display: block;
+    font-size: 0.8rem;
+    margin-left: 30px;
+}
+
+.already-have-an-account-span a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: bold;
+}
