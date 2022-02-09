@@ -1,5 +1,5 @@
-:root, body {
-    height: 100vh;
+:root {
+    height: 100%;
     --box-shadow-color: rgb(207, 207, 207);
     --background-color: rgb(45, 108, 150);
     --light-gray: rgb(238, 238, 238);
@@ -17,7 +17,9 @@ em {
 }
 
 body {
+    height: 100%;
     display: flex;
+    align-items: stretch;
     font-family: sans-serif;
 }
 
@@ -30,7 +32,6 @@ h2 {
     background-image: url('../img/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
     width: 32%;
 }
 
@@ -82,7 +83,12 @@ h2 {
     width: calc(100% - 32%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow: scroll;
+}
+
+.right-section .paragraphs {
+    margin-top: 100px;
 }
 
 .right-section p {
@@ -113,7 +119,7 @@ form .lets-do-this-section > ul {
     flex-flow: row wrap;
     gap: 40px;
     row-gap: 20px;
-    max-width: 70%;
+    max-width: 430px;
     margin-top: 20px;
 }
 
@@ -172,6 +178,7 @@ form button {
     display: block;
     font-size: 0.8rem;
     margin-left: 30px;
+    margin-bottom: 30px;
 }
 
 .already-have-an-account-span a {
